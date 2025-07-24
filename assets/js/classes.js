@@ -23,7 +23,7 @@ class Character {
 class Knight extends Character {
   constructor(name) {
     super(name);
-    this.life = 120;
+    this.life = 100;
     this.maxPowerLife = this.life;
     this.strengthAttack = 10;
     this.strengthDefense = 8;
@@ -74,9 +74,17 @@ class Stage {
 
   update() {
     // fighter 1
-    this.fighter1El.querySelector('.name').innerHTML = this.fighter1.name;
+    this.fighter1El.querySelector(
+      '.name'
+    ).innerHTML = `${this.fighter1.name} ${this.fighter1.life} HP`;
+    let lifePct1 = (this.fighter1.life / this.fighter1.maxPowerLife) * 100;
+    this.fighter1El.querySelector('.bar').style.width = `${lifePct1}%`;
 
     //fighter 2
-    this.fighter2El.querySelector('.name').innerHTML = this.fighter2.name;
+    this.fighter2El.querySelector(
+      '.name'
+    ).innerHTML = `${this.fighter2.name} ${this.fighter2.maxPowerLife}  HP`;
+    let lifePct2 = (this.fighter2.life / this.fighter2.life) * 100;
+    this.fighter2El.querySelector('.bar').style.width = `${lifePct2}%`;
   }
 }
