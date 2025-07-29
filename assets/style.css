@@ -1,4 +1,6 @@
 * {
+  background-color: #333;
+  color: #fff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -17,6 +19,7 @@
   height: 10px;
   border: 1px solid #333;
   border-radius: 5px;
+  border: 2px solid #fff;
 }
 
 .life-bar .bar {
